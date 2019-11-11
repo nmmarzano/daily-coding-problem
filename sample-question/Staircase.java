@@ -1,5 +1,3 @@
-package dailycodingproblem;
-
 public class Staircase {
 	
 	public static int waysToClimb(int steps, int[] alts){
