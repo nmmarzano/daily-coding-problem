@@ -10,7 +10,7 @@ Given this implementation of cons:
         return f(a, b)
       return pair
 
-Implement car and cdr.
+Implement `car` and `cdr`.
 
 ## Proposed Solution
 
