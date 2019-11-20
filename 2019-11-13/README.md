@@ -19,7 +19,7 @@ The following test should pass:
 ## Proposed Solution
 Trivial to implement with JSON serialization so a simple serialization by hand was tackled.
 
-Ha ha man this sucks. Not proud of it, "it works" levels of quality.
+Ha ha man this sucks. Not proud of it, "it works" levels of quality. Super simple serializer, mess of a deserializer.
 
 ## Testing
 Create instances of `SerialTree.Node`, build a tree, then apply `SerialTree.serialize(Node node)` and `SerialTree.deserialize(String s)` to your heart's content.
