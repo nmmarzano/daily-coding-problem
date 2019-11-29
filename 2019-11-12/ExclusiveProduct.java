@@ -19,7 +19,7 @@ public class ExclusiveProduct {
     int[] result = new int[numbers.length];
     int product;
     for (int i = 0; i < numbers.length; i++) {
-      roduct = 1;
+      product = 1;
       for (int j = 0; j < numbers.length; j++) {
         if (j != i) {
           product *= numbers[j];
