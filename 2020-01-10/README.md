@@ -8,7 +8,7 @@ Do this faster than the naive method of repeated multiplication.
 ## Proposed Solution
 Calculates 10^100000 in 0.050s as opposed to the 1.569s of the naive method.
 
-Done by "grouping" factors by pairs, doing log2(y) passes. Visualization:
+Done by "grouping" factors by pairs, doing log2(y) passes as problem size is halved in each pass. Visualization:
 
     2^5
     
@@ -24,7 +24,7 @@ Done by "grouping" factors by pairs, doing log2(y) passes. Visualization:
     
     32
     
-I don't have to redo the calculation for each group, so I only do one calculation for the "group result" and then another to account for the leftover term in case there's an odd number of them. So for each step of the example above the calculation done goes like:
+I don't have to redo the calculation for each group, so I only do one multiplication for the "group result" and then another to account for the leftover term in case there's an odd number of them. So for the example above the calculation done goes like this step by step:
 
     // setup
     rest = 1; result = x = 2;
