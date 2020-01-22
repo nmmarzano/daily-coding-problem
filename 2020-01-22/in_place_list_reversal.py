@@ -37,18 +37,24 @@ def print_list(ll):
     while cur is not None:
         print(cur)
         cur = cur.get_child()
+
+
+def create_list(length):
+    head = Node(1)
+    cur = head
+    for i in range(2, length + 1):
+        aux = Node(i)
+        cur.set_child(aux)
+        cur = aux
+    return head
         
 
 if __name__ == '__main__':
-    n5 = Node('5')
-    n4 = Node('4', n5)
-    n3 = Node('3', n4)
-    n2 = Node('2', n3)
-    n1 = Node('1', n2)
+    length = int(input('Enter length of list: ').strip())
+    ll = create_list(length)
 
-    ll = n1
-
+    print('\nList: ')
     print_list(ll)
-    print()
+    print('\nReversed: ')
     ll = reverse_list(ll)
     print_list(ll)
