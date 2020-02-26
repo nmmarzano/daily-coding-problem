@@ -1,7 +1,7 @@
 from threading import Timer
 
 
-def debounced(func, seconds):
+def debounced(func, milliseconds):
     can_call = True
 
     def reactivate():
@@ -12,7 +12,7 @@ def debounced(func, seconds):
         nonlocal can_call
         if can_call:
             can_call = False
-            Timer(seconds, reactivate).start()
+            Timer(milliseconds/1000, reactivate).start()
             return func(*args, **kwargs)
         return
 
@@ -20,7 +20,7 @@ def debounced(func, seconds):
 
 
 if __name__ == '__main__':
-    multiply = debounced(lambda x, y: x*y, 0.2)
+    multiply = debounced(lambda x, y: x*y, 200)
 
     for i in range(1000000):
         x = multiply(2, 3)
